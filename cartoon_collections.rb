@@ -18,5 +18,9 @@ def find_the_cheese(list)
   
   #if (list.any? {|i| cheese_types.include?(i)}) == true
   #end
-  (cheese_types & list).join 
+  if (cheese_types & list).length > 0
+    (cheese_types & list).join
+  else
+    nil
+  end
 end
